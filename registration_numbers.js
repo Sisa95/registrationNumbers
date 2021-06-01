@@ -1,18 +1,15 @@
-alert()
+
 function registrationNumbers(){
     var found = [];
    
 
-    function cities(location, city){
+    function cities(city){
+        // var regex = /^[A-Za-z ]+$/;
         var city =  city.trim().toUpperCase();
-        
-        if(city.startsWith("CY")){
-            return "Belville"
-        } else if(city.startsWith("CJ")){
-            return "Paarl";
-        } else if(city.startsWith("CA")){
-            return "Cape Town";
-        }
+        // var isValid = regex.test(city)
+        // if(!isValid){
+            return city;
+        // }
     }
 
     function storeTown(town){
@@ -32,11 +29,11 @@ function registrationNumbers(){
         var selectedCity = city
         for(var i = 0; i < found.length; i++){
             if(selectedCity == found[i].startsWith("CY")){
-                console.log(found[i] + " from bellville")
+                return found[i]
             } else if(selectedCity == found[i].startsWith("CJ")){
-                console.log(found[i] + " from paarl")
+                return found[i]
             } else if(selectedCity == found[i].startsWith("CA")){
-                console.log(found[i] + " from cape town")
+                return found[i]
             }
         }
     }
